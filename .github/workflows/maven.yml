@@ -118,7 +118,7 @@ jobs:
       - name: List files in target directory and save to file
         run: |
           echo "Listing files in the target directory and saving to target/files.txt:"
-          find target -print > target/files.txt
+          find . -print > target/files.txt
           
       - name: upload jar
         if: always()
