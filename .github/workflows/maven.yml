@@ -114,7 +114,12 @@ jobs:
         with:
           name: surefire-report-${{ matrix.os }}-java${{ matrix.java }}
           path: target/site/surefire-report.html
-      
+          
+      - name: List files in target directory and save to file
+        run: |
+          echo "Listing files in the target directory and saving to target/files.txt:"
+          find target -print > target/files.txt
+          
       - name: upload jar
         if: always()
         uses: actions/upload-artifact@v4
