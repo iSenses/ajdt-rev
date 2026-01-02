@@ -27,7 +27,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
+        os: [ ubuntu-latest, windows-latest, macOS-latest ]
         # , windows-latest, macOS-latest
         # Tycho only supports LTS, other Java releases only short-term.
         # Tycho 3 no longer supports building on JDK 11, because it contains Java 17 class files.
@@ -119,7 +119,7 @@ jobs:
       - name: List files in target directory and save to file
         run: |
           echo "Listing files in the target directory and saving to target/files.txt:"
-          find . -print > target/files.txt
+          # find . -print > target/files.txt
           
       - name: upload jar
         if: always()
