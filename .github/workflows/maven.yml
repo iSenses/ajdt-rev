@@ -126,5 +126,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ajdt-rev-latest
-          path: target/**
+          path: |
+            target/**
+            org.eclipse.ajdt.releng/target/**
           overwrite: true
