@@ -47,7 +47,7 @@ public class XReferenceCustomFilterAction extends Action {
 
 		setText(XRefMessages.OpenCustomFiltersDialogAction_text);
 		setImageDescriptor(JavaPluginImages.DESC_ELCL_FILTER);
-		setDisabledImageDescriptor(JavaPluginImages.DESC_DLCL_FILTER);
+		// setDisabledImageDescriptor(JavaPluginImages.DESC_DLCL_FILTER);
 
 		populatingList = new ArrayList<>();
 		checkedList = new ArrayList<>();
