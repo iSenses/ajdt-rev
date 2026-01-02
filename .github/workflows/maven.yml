@@ -114,3 +114,10 @@ jobs:
         with:
           name: surefire-report-${{ matrix.os }}-java${{ matrix.java }}
           path: target/site/surefire-report.html
+      
+      - name: upload jar
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ajdt-latest
+          path: target/**
